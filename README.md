@@ -3,8 +3,8 @@
 ## Getting Started
 
 1. start kafka
-2. start service: `go run cmd/service/main.go`
-3. start processor: `go run cmd/processor/main.go`
+2. start processor: `go run cmd/processor/main.go`
+3. start service: `go run cmd/service/main.go`
 
 ## Endpoint
 

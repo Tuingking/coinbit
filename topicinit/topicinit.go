@@ -28,6 +28,8 @@ func EnsureTableExists(topic string, brokers []string) {
 
 func createTopicManager(brokers []string) goka.TopicManager {
 	tmc := goka.NewTopicManagerConfig()
+	tmc.Table.Replication = 1
+	tmc.Stream.Replication = 1
 	tm, err := goka.NewTopicManager(brokers, goka.DefaultConfig(), tmc)
 	if err != nil {
 		log.Fatalf("Error creating topic manager: %v", err)
